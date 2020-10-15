@@ -13,13 +13,14 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/ramen-ratings.csv"
+          "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/ramen_popularity.csv"
         },
         "key": "Country",
-        "fields": ["Stars"]
+        "fields": ["freq"]
       }
     },
-    {"calculate": "datum.Stars", "as": "Popularity"}
+    {"calculate": "(datum.freq + 0.1)/10", "as": "Popularity"
+    }
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
@@ -27,11 +28,15 @@
       "field": "Popularity",
       "type": "quantitative",
       "scale": {
-        "type": "log"}
+        "type": "threshold",
+        "domain": [1, 10, 50, 100, 200], 
+        "range": ["#cccccc", "#ffffb2", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"]
+      }
+
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Popularity", "type": "quantitative"}
+      {"field": "freq", "type": "quantitative", "title": "Popularity"}
     ]
   }
 }

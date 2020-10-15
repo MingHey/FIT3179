@@ -1,8 +1,8 @@
-#choropleth {
+#chloropleth {
 	top:100px;
 	bottom: 100px; 
 	left: 500px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	height: 1000px;
+	width: 800px;
 }

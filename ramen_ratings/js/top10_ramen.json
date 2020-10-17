@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A word cloud visualization depicting Vega research paper abstracts.",
+  "width": 800,
+  "height": 400,
+  "padding": 0,
+
+  "data": [
+    {
+      "name": "table",
+      "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/top10.csv",
+      "transform": [
+        {
+          "type": "countpattern",
+          "field": "data",
+          "case": "upper",
+          "pattern": "[\\w']{3,}",
+          "stopwords": "(Noodle|Noodles|Instant Noodle|Instant|Flavor|Flavour|Ramen|With|Edition)"
+        },
+        {
+          "type": "formula", "as": "angle",
+          "expr": "[-90, 0][~~(random() * 3)]"
+        },
+        {
+          "type": "formula", "as": "weight",
+          "expr": "if(datum.text=='CHICKEN' | datum.text=='CURRY' | datum.text=='SINGAPORE', 700, 500)"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "text"},
+      "range": ["#d5a928", "#bd0026", "#f8e313"]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "text",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "text": {"field": "text"},
+          "align": {"value": "center"},
+          "baseline": {"value": "alphabetic"},
+          "fill": {"scale": "color", "field": "text"}
+        },
+        "update": {
+          "fillOpacity": {"value": 1}
+        },
+        "hover": {
+          "fillOpacity": {"value": 0.5}
+        }
+      },
+      "transform": [
+        {
+          "type": "wordcloud",
+          "size": [800, 400],
+          "text": {"field": "text"},
+          "rotate": {"field": "datum.angle"},
+          "font": "Helvetica Bold, Colus",
+          "fontSize": {"field": "datum.count"},
+          "fontWeight": {"field": "datum.weight"},
+          "fontSizeRange": [24, 72],
+          "padding": 1.5
+        }
+      ]
+    }
+  ]
+}

@@ -14,17 +14,17 @@
 </head>
 <body>
 
-<div id="chloropleth"></div>
+<div id="choropleth"></div>
   <div id="raidal"></div>
 
 <script type="text/javascript">
-  var map_spec = "https://minghey.github.io/FIT3179/ramen_ratings/js/chloropleth.json";
-  vegaEmbed('#chloropleth', map_spec).then(function(result) {
+  var map_spec = "https://minghey.github.io/FIT3179/ramen_ratings/js/choropleth.json";
+  vegaEmbed('#choropleth', map_spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
   var pie_spec = "https://minghey.github.io/FIT3179/ramen_ratings/js/style_proportion.json";
-  vegaEmbed('#chloropleth', pie_spec).then(function(result) {
+  vegaEmbed('#radial', pie_spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>

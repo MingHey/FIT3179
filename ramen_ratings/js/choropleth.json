@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {"text": "Popularity of Ramen Across The Globe",
-            "fontSize": 25,
+            "fontSize": 20,
             "align": "center"
   },
   "width": 800,

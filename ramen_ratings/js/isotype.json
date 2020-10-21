@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A Wilkinson Dot Plot",
+  "height": 500,
+  "width": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/brand_country.csv"
+  },
+  "transform": [
+    {
+    "window": [{"op": "rank", "as": "id"}],
+    "groupby": ["Country"]
+  },
+  {
+    "calculate": "datum.id/100", "as": "brand_count"
+  }
+  ],
+  "mark": {
+  	"type": "circle",
+  	"opacity": 1,
+    "filled": true
+  },
+  "encoding": {
+    "x": {"field": "brand_count", "type": "ordinal", "axis": null},
+    "y": {"field": "Country", "type": "ordinal"},
+    "color": {"scale": {
+      "domain": ["Japan", "United States of America", "South Korea"],
+      "range": ["#FFD700", "#C0C0C0", "#CD7F32"] }
+    
+    }
+  }
+}

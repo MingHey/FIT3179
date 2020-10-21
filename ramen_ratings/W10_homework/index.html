@@ -1,1 +1,32 @@
-aaa
+  
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="https://minghey.github.io/FIT3179/ramen_ratings/css/styles.css" media="all">
+  
+</head>
+<body>
+
+<div id="chloropleth"></div>
+  <div id="raidal"></div>
+
+<script type="text/javascript">
+  var map_spec = "https://minghey.github.io/FIT3179/ramen_ratings/js/chloropleth.json";
+  vegaEmbed('#chloropleth', map_spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var pie_spec = "https://minghey.github.io/FIT3179/ramen_ratings/js/style_proportion.json";
+  vegaEmbed('#chloropleth', pie_spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>

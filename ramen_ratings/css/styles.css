@@ -9,7 +9,7 @@
 }
 
 #radial {
-	position: absolute;
+	position: relative;
 	top: 25px;
 	bottom: 100px;
 	left: 150px;

@@ -3,7 +3,7 @@
   "description": "A simple radial chart showing the distribution of packaging style among countries",
   "title": {
     "text": "Distribution of Ramen Packaging Style",
-    "fontSize": 25
+    "fontSize": 20
   },
   "height": 600,
   "width": 600,

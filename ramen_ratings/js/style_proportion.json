@@ -1,18 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple radial chart showing the distribution of packaging style among countries",
-  "height": 500,
+  "height": 600,
   "width": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/ramen_ratings.csv"
   },
-  "selection": {
-            "Parameter": {
-              "type": "single",
-              "fields": ["Country"],
-              "bind": {
-                "input": "select",
-                "options": [
+  "params": [
+     { 
+      "name": "Country_selection",
+      "bind": { 
+        "input": "select", 
+        "options": [ null, 
                   "Japan",
                   "United States of America",
                   "South Korea",
@@ -24,21 +23,34 @@
                   "Indonesia",
                   "Singapore",
                   "Vietnam",
-                  "United Kingdom"
-                ]
-              }
-            }
-  },
+                  "United Kingdom" ], 
+        "labels":[ "Show All", "Japan",
+                  "USA",
+                  "South Korea",
+                  "Taiwan",
+                  "Thailand",
+                  "China",
+                  "Malaysia",
+                  "Hong Kong",
+                  "Indonesia",
+                  "Singapore",
+                  "Vietnam",
+                  "UK" ], 
+        "name": "Country Selection: " 
+        } 
+      } 
+    ],
   "transform": [
     {
     "filter": {
         "field": "Style",
         "oneOf": ["Cup", "Pack", "Bowl", "Tray"]
       }
-    }
+    },
+    {"filter": "Country_selection == null || datum.Country == Country_selection"}
   ],
   "layer": [{
-    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#ffff"}
+    "mark": {"type": "arc", "innerRadius": 70, "stroke": "#ffff"}
   },
   {
     "mark": {"type": "text", "radiusOffset": 90, "fontSize": 18},
@@ -48,32 +60,30 @@
   }],
   "encoding": {
     "theta": {
-      "condition": {
         "aggregate": "count",
         "field": "Style",
         "type": "quantitative",
-        "stack": true,
-        "selection": "Parameter"
-      }
+        "stack": true
     },
     "radius": {
-      "condition": {
         "aggregate": "count", 
         "field": "Style", 
         "type": "quantitative", 
         "scale": {
-          "type": "symlog", 
+          "type": "symlog",
           "zero": true, 
-          "rangeMin": 20, 
-          "rangeMax": 200},
-        "selection": "Parameter"
-    }
+          "rangeMin": 100, 
+          "rangeMax": 200}
     },
     "color": {
         "field": "Style",
         "type": "nominal",
         "legend": {"labelFontSize": 20, "titleFontSize": 15, "padding": 40}
-    }
+    },
+    "tooltip": [
+      {"field": "Style", "type": "nominal"}, 
+      {"aggregate": "count", "field": "Style", "type": "quantitative", "title": "Count of Packaging Style"}
+        ]
   },
   "view": {"stroke": null}
 }

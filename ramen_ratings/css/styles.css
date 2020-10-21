@@ -1,5 +1,5 @@
 #chloropleth {
-	position: absolute;
+	position: relative;
 	top: 50px;
 	bottom: 100px; 
 	left: 150px;
@@ -9,8 +9,8 @@
 }
 
 #radial {
-	position: relative;
-	top: 500px;
+	position: absolute;
+	top: 50px;
 	bottom: 100px;
 	left: 150px;
 	right: 100px;

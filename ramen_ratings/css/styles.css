@@ -8,6 +8,25 @@
 	width: 1000px;*/
 }
 
+h2{
+	font-weight: 900;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: red;
+	text-align: center;
+	background-color: orange;
+    }
+
+body{
+       background-color: lightgray;
+     }
+
+.page{
+       width: 850px;    
+       background-color: white;   
+       margin: auto;
+       padding: 50px;
+       padding-top: 35px;
+    }
 /*
 #radial {
 	position: absolute;

@@ -1,32 +1,50 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A Wilkinson Dot Plot",
+  "title": {
+    "text": "Number of brands per country",
+    "fontSize": 25,
+    "fontWeight": "bold",
+    "font": "Trebuchet MS, Arial, sans-serif"
+  },
   "height": 500,
-  "width": 500,
+  "width": 800,
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/brand_country.csv"
   },
   "transform": [
     {
+      "calculate": "{'Japan': 'Japan', 'United States of America': 'United States of America', 'Taiwan': 'Taiwan'}[datum.Country] || 'other'",
+      "as": "colour"
+    },
+    {
     "window": [{"op": "rank", "as": "id"}],
     "groupby": ["Country"]
   },
   {
-    "calculate": "datum.id/100", "as": "brand_count"
+    "filter": "datum.id > 1"
   }
   ],
   "mark": {
-  	"type": "circle",
-  	"opacity": 1,
+  	"type": "square",
+  	"size": 150,
     "filled": true
   },
   "encoding": {
-    "x": {"field": "brand_count", "type": "ordinal", "axis": null},
-    "y": {"field": "Country", "type": "ordinal"},
-    "color": {"scale": {
-      "domain": ["Japan", "United States of America", "South Korea"],
-      "range": ["#FFD700", "#C0C0C0", "#CD7F32"] }
-    
+    "x": {"field": "id", "type": "ordinal", "title": "Number of brands", "axis": null},
+    "y": {"field": "Country", "type": "ordinal", "title": null, "axis": {"labelFontSize": 15, "labelFont": "Museo Sans, sans-serif"}},
+    "color": {
+      "field": "colour",
+      "type": "nominal",
+      "scale": {
+      "domain": ["other", "Japan", "United States of America", "Taiwan"],
+      "range": ["#006EB9", "#D4AF37", "#AAA9AD", "#912E17"]
+      },
+      "legend": null
+    },
+    "opacity": {
+      "condition": { "test": "datum['Country'] == 'Japan' || datum['Country'] == 'United States of America' || datum['Country'] == 'Taiwan'", "value": 1 }, 
+      "value": 0.3
     }
   }
 }

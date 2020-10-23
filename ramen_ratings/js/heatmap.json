@@ -1,7 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {
+    "text": "Average Rating of Brands with More Than 30 Reviews",
+    "fontSize": 25,
+    "fontWeight": "bold",
+    "font": "Trebuchet MS, Arial, sans-serif"
+  },
   "height": 300,
-  "width": 800,
+  "width": 900,
   "data": {"url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/brand_ratings.csv"},
   "transform": [
     {
@@ -10,8 +16,8 @@
     }
   ],
   "encoding": {
-    "y": {"field": "Style", "type": "nominal"},
-    "x": {"field": "Brand", "type": "nominal", "axis":{"labelAngle": 0}}
+    "y": {"field": "Style", "type": "nominal", "axis": {"labelFontSize": 15, "labelPadding": 10, "titleFontSize": 15}},
+    "x": {"field": "Brand", "type": "nominal", "axis":{"labelAngle": 0, "labelFontSize": 12, "labelPadding": 5, "titleFontSize": 15}}
   },
   "layer": [
     {
@@ -22,7 +28,7 @@
           "type": "quantitative",
           "title": "Ratings",
           "scale": {"scheme": "goldgreen"},
-          "legend": {"direction": "horizontal", "gradientLength": 200}
+          "legend": {"direction": "horizontal", "gradientLength": 200, "orient": "bottom"}
         }
       }
     },
@@ -38,6 +44,7 @@
     }
   ],
   "config": {
-    "axis": {"grid": true, "tickBand": "extent"}
+    "axis": {"grid": true, "tickBand": "extent"},
+    "background": "ivory"
   }
 }

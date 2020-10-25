@@ -1,6 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A word cloud visualization depicting Vega research paper abstracts.",
+  "title": {
+    "text": "Most Promoted Variety/Flavours",
+    "fontSize": 25,
+    "fontWeight": "bold",
+    "font": "Trebuchet MS, Arial, sans-serif"
+  },
   "width": 800,
   "height": 400,
   "padding": 0,
@@ -70,5 +76,8 @@
         }
       ]
     }
-  ]
+  ],
+  "config": {
+    "background": "#FAFAFA"
+  }
 }

@@ -2,8 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple radial chart showing the distribution of packaging style among countries",
   "title": {
-    "text": "Distribution of Ramen Packaging Style",
-    "fontSize": 20
+    "text": "Average Rating of Brands with More Than 30 Reviews",
+    "fontSize": 25,
+    "fontWeight": "bold",
+    "font": "Trebuchet MS, Arial, sans-serif",
+    "align": "center"
   },
   "height": 600,
   "width": 600,
@@ -51,30 +54,43 @@
         "oneOf": ["Cup", "Pack", "Bowl", "Tray"]
       }
     },
-    {"filter": "Country_selection == null || datum.Country == Country_selection"}
+    {"filter": "Country_selection == null || datum.Country == Country_selection"},
+    {"aggregate": [{
+       "op": "count",
+       "field": "Style",
+       "as": "StyleCount"
+      }],
+      "groupby": ["Style"]
+      },
+    {"joinaggregate": [
+      {
+        "op": "sum",
+        "field": "StyleCount",
+        "as": "Total"
+        }
+    ]},
+    {"calculate": "datum.StyleCount/datum.Total * 100", "as": "Percent"}
   ],
   "layer": [{
     "mark": {"type": "arc", "innerRadius": 70, "stroke": "#ffff"}
   },
   {
-    "mark": {"type": "text", "radiusOffset": 90, "fontSize": 18},
+    "mark": {"type": "text", "radiusOffset": 100, "fontSize": 18},
     "encoding": {
-      "text": {"aggregate": "count", "field": "Style", "type": "quantitative"}
+      "text": {"field": "Style"}
     }
   }],
   "encoding": {
     "theta": {
-        "aggregate": "count",
-        "field": "Style",
+        "field": "StyleCount",
         "type": "quantitative",
         "stack": true
     },
     "radius": {
-        "aggregate": "count", 
-        "field": "Style", 
+        "field": "StyleCount", 
         "type": "quantitative", 
         "scale": {
-          "type": "symlog",
+          "type": "sqrt",
           "zero": true, 
           "rangeMin": 100, 
           "rangeMax": 200}
@@ -82,11 +98,12 @@
     "color": {
         "field": "Style",
         "type": "nominal",
-        "legend": {"labelFontSize": 20, "titleFontSize": 15, "padding": 40}
+        "legend": null
     },
     "tooltip": [
       {"field": "Style", "type": "nominal"}, 
-      {"aggregate": "count", "field": "Style", "type": "quantitative", "title": "Count of Packaging Style"}
+      {"field": "StyleCount", "type": "quantitative", "title": "Count of Packaging Style"},
+      {"field": "Percent", "type": "quantitative", "format": ".2f"}
         ]
   },
   "view": {"stroke": null}

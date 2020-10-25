@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A Wilkinson Dot Plot",
+  "description": "Isotype chart with image from Icons made by https://www.flaticon.com/authors/freepik from https://www.flaticon.com/",
   "title": {
     "text": "Number of brands per country",
     "fontSize": 25,
     "fontWeight": "bold",
     "font": "Trebuchet MS, Arial, sans-serif"
   },
-  "height": 600,
+  "height": 800,
   "width": 1000,
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/brand_country.csv"
@@ -21,14 +21,15 @@
     "window": [{"op": "rank", "as": "id"}],
     "groupby": ["Country"]
   },
-  {
-    "filter": "datum.id > 1"
+  {"filter": {"field": "Country", "oneOf": ["Australia", "Bangladesh", "Canada", "China", "Germany", "Hong Kong", "Hungary", "India", "Indonesia", "Japan", "Malaysia", "Mexico", "Netherlands", "Pakistan", "Philipines", "Singapore", "South Korea", "Taiwan", "Thailand", "United Kingdom", "United States of America", "Vietnam"]}
   }
   ],
   "mark": {
   	"type": "point",
-  	"size": 0.005,
-    "filled": true
+  	"size": 0.008,
+    "filled": true,
+    "yOffset": -13,
+    "xOffset": -5
   },
   "encoding": {
     "x": {"field": "id", "type": "ordinal", "title": "Number of brands", "axis": null},
@@ -47,5 +48,8 @@
       "condition": { "test": "datum['Country'] == 'Japan' || datum['Country'] == 'United States of America' || datum['Country'] == 'Taiwan'", "value": 1 }, 
       "value": 0.3
     }
+  },
+  "config": {
+    "background": "ivory"
   }
 }

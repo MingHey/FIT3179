@@ -1,6 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "A word cloud visualization depicting Vega research paper abstracts.",
+  "description": "A word cloud visualization depicting ingredients/flavours awarded the Top 10 honour.",
+  "title": {
+    "text": "Top 10 Ramen Ingredients/Flavours",
+    "fontSize": 25,
+    "fontWeight": "bold",
+    "font": "Trebuchet MS, Arial, sans-serif"
+  },
   "width": 800,
   "height": 400,
   "padding": 0,
@@ -70,5 +76,8 @@
         }
       ]
     }
-  ]
+  ],
+  "config": {
+    "background": "#FCFCFC"
+  }
 }

@@ -9,12 +9,28 @@
   "height": 290,
   "width": 870,
   "data": {"url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/brand_ratings.csv"},
+  "params": [
+    { 
+      "name": "Rating_Above", 
+      "value": 0, 
+      "bind": { 
+        "input": "range", 
+        "min": 2.4, "max": 4.5, 
+        "step": 0.05, 
+        "name": "Minimum Average Rating: "
+      } 
+    }
+  ],
   "transform": [
     {
       "aggregate": [{"op": "mean", "field": "Stars", "as": "Rating"}],
       "groupby": ["Style", "Brand"]
+    },
+    {
+      "filter": "datum.Rating > Rating_Above"
     }
   ],
+  
   "encoding": {
     "y": {"field": "Style", "type": "nominal", "axis": {"labelFontSize": 15, "labelPadding": 10, "titleFontSize": 16, "labelFont": "Garmond", "titleFont": "Tahoma"}},
     "x": {"field": "Brand", "type": "nominal", "axis":{"labelAngle": 0, "labelFontSize": 13, "labelPadding": 10, "titleFontSize": 16, "labelFontWeight": 500, "titlePadding": 20, "labelFont": "Garmond", "titleFont": "Tahoma"}}
@@ -26,14 +42,23 @@
         "color": {
           "field": "Rating",
           "type": "quantitative",
-          "title": "Ratings",
           "scale": {"scheme": "goldgreen"},
-          "legend": {"direction": "horizontal", "gradientLength": 200, "orient": "bottom", "labelFontSize": 13, "labelFont": "Helvetica", "labelFontWeight": 550, "titleFontSize": 13, "titleFont": "Verdana", "titleFontStyle": "italic"}
+          "title": "Ratings",
+          "legend": {
+            "direction": "horizontal", 
+            "gradientLength": 200, 
+            "orient": "bottom", 
+            "labelFontSize": 13, 
+            "labelFont": "Helvetica", 
+            "labelFontWeight": 500, 
+            "titleFontSize": 13, 
+            "titleFont": "Verdana", 
+            "titleFontStyle": "italic"}
         }
       }
     },
     {
-      "mark": "text",
+      "mark": {"type": "text", "font": "monospace", "fontSize": 14},
       "encoding": {
         "text": {"field": "Rating", "type": "quantitative", "format": ".3f"},
         "color": {

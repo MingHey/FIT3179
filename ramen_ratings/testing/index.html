@@ -143,24 +143,32 @@
   </div> <!-- end page -->
    
 <script type="text/javascript">
-  var specVis1 = "./normalised-stacked-bars-responsive.json";
-  var specVis2= "./line-chart-responsive.json";
+  var specMap = "https://minghey.github.io/FIT3179/ramen_ratings/js/choropleth.json";
+  var specWord= "https://minghey.github.io/FIT3179/ramen_ratings/js/top10_ramen.json";
+  var specPie= "https://minghey.github.io/FIT3179/ramen_ratings/js/style_proportion.json";
+  var specBar= "https://minghey.github.io/FIT3179/ramen_ratings/js/isotype.json";
+  var specRect= "https://minghey.github.io/FIT3179/ramen_ratings/js/heatmap.json";
 
-  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+  vegaEmbed('#choropleth', specMap, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+   vegaEmbed('wordcloud1', specWord, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+  vegaEmbed('radial', specPie, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+  vegaEmbed('isotype', specBar, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+  
+  vegaEmbed('isotype', specBar, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
 </script>
 </body>
 </html>

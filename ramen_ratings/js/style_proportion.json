@@ -8,8 +8,6 @@
     "font": "Trebuchet MS, Arial, sans-serif",
     "align": "center"
   },
-  "height": 600,
-  "width": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/ramen_ratings.csv"
   },
@@ -72,10 +70,10 @@
     {"calculate": "datum.StyleCount/datum.Total * 100", "as": "Percent"}
   ],
   "layer": [{
-    "mark": {"type": "arc", "innerRadius": 70, "stroke": "#ffff"}
+    "mark": {"type": "arc", "innerRadius": 55, "stroke": "#ffff"}
   },
   {
-    "mark": {"type": "text", "radiusOffset": 100, "fontSize": 18},
+    "mark": {"type": "text", "radiusOffset": 88, "fontSize": 18, "yOffset": -17, "font": "Museo Sans"},
     "encoding": {
       "text": {"field": "Style"}
     }
@@ -98,13 +96,20 @@
     "color": {
         "field": "Style",
         "type": "nominal",
-        "legend": null
+        "legend": null,
+        "scale": {
+          "domain": ["Cup", "Tray", "Bowl", "Pack"],
+          "range": ["#003F5C", "#7A5195", "#EF5675", "#FFA600"]
+        }
     },
     "tooltip": [
       {"field": "Style", "type": "nominal"}, 
       {"field": "StyleCount", "type": "quantitative", "title": "Count of Packaging Style"},
-      {"field": "Percent", "type": "quantitative", "format": ".2f"}
+      {"field": "Percent", "type": "quantitative", "format": ".2f", "title": "Percentage (%)"}
         ]
   },
-  "view": {"stroke": null}
+  "config": {
+    "view": {"stroke": null},
+    "background": "ivory"
+  }
 }

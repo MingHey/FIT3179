@@ -7,10 +7,6 @@
     "fontWeight": "bold",
     "font": "Trebuchet MS, Arial, sans-serif"
   },
-  "width": 800,
-  "height": 400,
-  "padding": 0,
-
   "data": [
     {
       "name": "table",

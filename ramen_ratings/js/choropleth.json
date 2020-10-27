@@ -1,11 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": {"text": "Popularity of Ramen Across The Globe",
-            "fontSize": 20,
-            "align": "center"
+  "title": {
+    "text": "Popularity of Ramen Across The Globe",
+    "fontSize": 25,
+    "fontWeight": "bold",
+    "font": "Trebuchet MS, Arial, sans-serif",
+    "align": "center"
   },
-  "width": 800,
-  "height": 600,
   "projection": {"type": "equirectangular"},
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/js/ne_110m_admin_0_countries.topojson",
@@ -23,7 +24,8 @@
       }
     },
     {"calculate": "(datum.freq + 0.1)/10", "as": "Popularity"
-    }
+    },
+    {"calculate": "datum.freq > 0 ? toString(datum.freq) : 'Unidentified'", "as": "freq_tooltip"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
@@ -34,12 +36,18 @@
         "type": "threshold",
         "domain": [1, 10, 50, 100, 200], 
         "range": ["#cccccc", "#ffffb2", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"]
-      }
-
+      },
+      "legend": {"labelFontSize": 13, "labelFont": "Helvetica", "labelFontWeight": 500, "titleFontSize": 13, "titleFont": "Verdana", "titleFontStyle": "italic"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "freq", "type": "quantitative", "title": "Popularity"}
+      {"field": "freq_tooltip", "type": "nominal", "title": "Popularity (Reviews)"
+      }
     ]
+  },
+   "config": {
+    "background": "ivory",
+    "view": {"fill": "white",
+    "stroke": null}
   }
 }

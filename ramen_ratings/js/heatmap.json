@@ -71,6 +71,6 @@
   "config": {
     "axis": {"grid": true, "tickBand": "extent", "ticks": false},
     "background": "ivory",
-    "padding": {"right": 10}
+    "padding": {"right": 15}
   }
 }

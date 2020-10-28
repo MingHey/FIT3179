@@ -51,6 +51,6 @@
   "config": {
     "background": "ivory",
     "view": {"stroke": null},
-    "padding": {"left": 10, "bottom": 10, "right": 10}
+    "padding": {"left": 15, "bottom": 15, "right": 15}
   }
 }

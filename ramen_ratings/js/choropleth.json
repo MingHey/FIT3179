@@ -51,6 +51,6 @@
     "background": "ivory",
     "view": {"fill": "white",
     "stroke": null},
-    "padding": {"left": 30}
+    "padding": {"left": 30, "bottom": 10}
   }
 }

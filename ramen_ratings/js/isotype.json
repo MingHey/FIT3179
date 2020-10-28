@@ -26,7 +26,7 @@
   ],
   "mark": {
   	"type": "point",
-  	"size": 0.005,
+  	"size": 0.008,
     "filled": true,
     "yOffset": -13,
     "xOffset": -5

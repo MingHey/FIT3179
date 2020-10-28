@@ -50,6 +50,7 @@
    "config": {
     "background": "ivory",
     "view": {"fill": "white",
-    "stroke": null}
+    "stroke": null},
+    "padding": {"left": 30}
   }
 }

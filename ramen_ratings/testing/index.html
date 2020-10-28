@@ -89,8 +89,8 @@
             <h2>Have you ever wonder what commonly found on ramen packaging</h2>
           </div>
           <div class="pure-button-group" role="group">
-            <button class="pure-button pure-button-active">Top 10 Category</button>
-            <button class="pure-button pure-button-active">Most Promoted</button>
+            <button class="pure-button pure-button-active" onclick="attachTop10()">Top 10 Category</button>
+            <button class="pure-button pure-button-active" onclick="attachMostPromoted()">Most Promoted</button>
           </div>
         </div>
     </div>
@@ -156,6 +156,18 @@
   var specBar= "https://minghey.github.io/FIT3179/ramen_ratings/js/isotype.json";
   var specRect= "https://minghey.github.io/FIT3179/ramen_ratings/js/heatmap.json";
 
+  function attachTop10() {
+    vegaEmbed('#wordcloud', specWord1, {"actions": false}).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  }
+  
+  function attachMostPromoted() {
+    vegaEmbed('#wordcloud', specWord2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  }
+  
   vegaEmbed('#choropleth', specMap, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);

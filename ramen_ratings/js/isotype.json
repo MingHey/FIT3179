@@ -7,6 +7,8 @@
     "fontWeight": "bold",
     "font": "Trebuchet MS, Arial, sans-serif"
   },
+  "height": 500,
+  "width": 750,
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/brand_country.csv"
   },
@@ -24,15 +26,10 @@
   ],
   "mark": {
   	"type": "point",
-  	"size": 0.008,
+  	"size": 0.005,
     "filled": true,
     "yOffset": -13,
     "xOffset": -5
-  },
-  "selection": {
-    "grid": {
-      "type": "interval", "bind": "scales"
-    }
   },
   "encoding": {
     "x": {"field": "id", "type": "ordinal", "title": "Number of brands", "axis": null},

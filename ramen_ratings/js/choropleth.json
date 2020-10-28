@@ -8,6 +8,7 @@
     "align": "center"
   },
   "width": "container",
+  "height": 550,
   "projection": {"type": "equirectangular"},
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/js/ne_110m_admin_0_countries.topojson",

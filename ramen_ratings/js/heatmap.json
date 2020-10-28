@@ -32,7 +32,7 @@
   ],
   
   "encoding": {
-    "y": {"field": "Style", "type": "nominal", "axis": {"labelFontSize": 15, "labelPadding": 10, "titleFontSize": 16, "labelFont": "Garmond", "titleFont": "Tahoma"}},
+    "y": {"field": "Style", "type": "nominal", "axis": {"labelFontSize": 15, "labelPadding": 5, "titleFontSize": 16, "labelFont": "Garmond", "titleFont": "Tahoma"}},
     "x": {"field": "Brand", "type": "nominal", "axis":{"labelAngle": 0, "labelFontSize": 13, "labelPadding": 10, "titleFontSize": 16, "labelFontWeight": 500, "titlePadding": 20, "labelFont": "Garmond", "titleFont": "Tahoma"}}
   },
   "layer": [
@@ -70,6 +70,7 @@
   ],
   "config": {
     "axis": {"grid": true, "tickBand": "extent", "ticks": false},
-    "background": "ivory"
+    "background": "ivory",
+    "padding": {"right": 10}
   }
 }

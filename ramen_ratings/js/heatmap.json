@@ -7,6 +7,7 @@
     "font": "Trebuchet MS, Arial, sans-serif"
   },
   "width": "container",
+  "height": 300,
   "data": {"url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/brand_ratings.csv"},
   "params": [
     { 

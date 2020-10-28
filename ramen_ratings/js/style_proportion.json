@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple radial chart showing the distribution of packaging style among countries",
   "title": {
-    "text": "Average Rating of Brands with More Than 30 Reviews",
+    "text": "Distribution of Ramen Packaging Style",
     "fontSize": 25,
     "fontWeight": "bold",
     "font": "Trebuchet MS, Arial, sans-serif",

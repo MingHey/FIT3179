@@ -50,6 +50,7 @@
   },
   "config": {
     "background": "ivory",
-    "view": {"stroke": null}
+    "view": {"stroke": null},
+    "padding": {"left": 10, "bottom": 10, "right": 10}
   }
 }

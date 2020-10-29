@@ -52,21 +52,37 @@ h3 {
 .dashboard-subtitle {
     font-weight: 100;
     color: #FF7F50;
-    font-size: 36px;
+    font-size: 16px;
 }
-
+label {
+	font-size: 18px;
+	padding: 2em, 2em;
+	
+}
+#aligned-country {
+	width: 50;	
+}
+.pure-controls {
+	padding: 2em, 3em;	
+}
+.pure-button-primary {
+	font-size: 12px;
+	background-color: blue;
+}
 .button-top10,
-    .button-mostpromoted {
-      color: black;
-      background-color: white; 
-      border-radius: 4px;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      border: none;  
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      width: 100%
-    }
+.button-mostpromoted {
+	color: black;
+	background-color: white; 
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	border: none;  
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 50%;
+	font-size: 72px;
+
+}
     .button-top10 {
       border: 2px solid rgb(202, 60, 60);
     }

@@ -28,8 +28,31 @@
         </div>
     </div>
 
-    <div class="content pure-u-md-3-4">
-        <p> Text</p>
+    <div class="content pure-u-3-4">
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="choropleth" class="vis-container"></div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+   
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-3-4">
+          <div id="wordcloud" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-4">
+          <div class="description description-right">
+            <h2>Have you ever wonder what commonly found variety in ramen market</h2>
+          </div>
+          <div class="pure-button-group" role="group">
+            <button class="pure-button pure-button-active button-top10" onclick="attachTop10()">Top 10 Category</button>
+            <button class="pure-button pure-button-active button-mostpromoted" onclick="attachMostPromoted()">Most Promoted</button>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
     </div>
 
 <script type="text/javascript">

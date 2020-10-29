@@ -11,12 +11,135 @@
     <!-- Import vega-embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <!-- Import pure.css -->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-4ZPLezkTZTsojWFhpdFembdzFudphhoOzIunR1wH6g1WQDzCAiPvDyitaK67mp0+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
     
-    <link rel="stylesheet" type="text/css" href="https://minghey.github.io/FIT3179/ramen_ratings/Assignment2/styles2.css" media="all">
+    <!--<link rel="stylesheet" type="text/css" href="https://minghey.github.io/FIT3179/ramen_ratings/Assignment2/styles2.css" media="all">-->
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet"> 
+    
+  <!-- custom style -->
+  <style>
+    *{
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    h1{
+      font-weight: 900;
+      text-align: center;
+    }
+     body{
+       background-color: white;
+     }
+     .page{
+       width: 1200px;    
+       background-color: white;   
+       margin: auto;
+       padding: 20px;
+       padding-top: 35px;
+    }
+    .vis-container{
+      width: 100%;
+    }
+    .description h2, h1{
+      margin-top:0px;
+    }
+    .description-right {
+      padding-left: 20px;
+    }
+    .description-left{
+      padding-right: 20px;
+    }
+    .pure-g{
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .small-font{
+        font-size: 14px;
+    }
+    .header {
+        text-align: center;
+        top: auto;
+    }
+    .sidebar {
+      color: #FFFFCC;
+      background-color: #B10026;
+          width: 22%
+    }
+
+    .dashboard-title,
+    .dashboard-subtitle {
+        margin: 0;
+    }
+    .dashboard-title {
+          text-transform: uppercase;
+          font-weight: 900;
+      font-family: "La Oriental", sans-serif;
+    }
+    .dashboard-subtitle {
+        font-weight: 100;
+        font-size: 150%
+        color: #FF7F50;
+    }
+     .vega-bind-name{
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+    }
+    .button-top10,
+    .button-mostpromoted {
+      color: black;
+      background-color: white; 
+      border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      border: none;  
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%
+    }
+    .button-top10 {
+      border: 2px solid rgb(202, 60, 60);
+    }
+
+  .button-top10:hover {
+    background-color: rgb(202, 60, 60);
+    color: white;
+  }
+  .button-mostpromoted {
+    border: 2px solid rgb(223, 117, 20);
+  }
+  .button-mostpromoted:hover {
+    background-color: rgb(223, 117, 20);
+    color: white;
+  }  
+  .footer {
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 20% 2em 0;
+        text-align: center;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+   </style>
 </head>
     
 <body>
@@ -53,6 +176,63 @@
         </div>
       </div>
       <!-- end pure grid group -->
+        
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-4">
+          <div class="description description-left">
+            <h2>Which country do you think manufactured the most ramen product ?</h2>
+            <form class="pure-form pure-form-stacked">
+              <fieldset>
+                <legend>Fill in to let me know</legend>
+                <label for="stacked-country">Country</label>
+                <input type="text" id="stacked-country" placeholder="Country" />
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <div id="radial"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-4">
+          <div class="description description-right">
+            <p>The three types of instant noodle seasonings are powder-type, liquid-type and granulated powder-type. Among them, powder-type has the largest share.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      <!-- pure grid group -->
+      <div class="pure-g">
+          <div class="pure-u-1-1">
+            <div id="isotype"  class="vis-container"></div>
+            <div class = "small-font">
+              <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            </div>
+            <p>Japan (58 known brands) tops other countries in term of number of brands, followed by USA (49 known brands) coming in second place. Not too surprised that Taiwan (47 known brands) is nominated in the Top 3 for this ranking.</p>
+          </div>
+      </div>
+      <!-- end pure grid group -->
+
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-4">
+          <div class="description description-left">
+            <p>The average ratings of ramen brands with 30 reviews above is 3.808/5. Among all the records, there exists 48.76% ramen brands with 30 reviews above that receives average rating higher than 3.808.</p>
+          </div>
+        </div>
+        <div class="pure-u-3-4">
+          <div id="heatmap"  class="vis-container"></div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+  
+      <div class="pure-g">
+        <div class="pure-u-1-1 small-font">
+          <p>This visualisation is created by <a href="https://github.com/MingHey" target="_blank">Ming Hey Lim</a>. The datasource is <a href="https://github.com/MingHey" target="_blank">some data repository online</href>.</p>
+        </div>
+      </div>
     </div>
 
 <script type="text/javascript">

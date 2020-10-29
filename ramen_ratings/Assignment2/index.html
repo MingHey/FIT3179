@@ -33,110 +33,156 @@
         <div>
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
-                <h1 class="content-subhead">Pinned Post</h1>
-
                 <!-- A single blog post -->
                 <section class="post">
                     <header class="post-header">
-
-                        <h2 class="post-title">Introducing Pure</h2>
-
-                        <p class="post-meta">
-                            By <a href="#" class="post-author">Tilo Mitra</a> under <a class="post-category post-category-design" href="#">CSS</a> <a class="post-category post-category-pure" href="#">Pure</a>
-                        </p>
+                        <h2 class="post-title">Have A Glance On The Popularity Of Ramen Worldwide</h2>  
                     </header>
 
-                    <div class="post-description">
-                        <p>
-                            Yesterday at CSSConf, we launched Pure – a new CSS library. Phew! Here are the <a href="https://speakerdeck.com/tilomitra/pure-bliss">slides from the presentation</a>. Although it looks pretty minimalist, we’ve been working on Pure for several months. After many iterations, we have released Pure as a set of small, responsive, CSS modules that you can use in every web project.
-                        </p>
-                    </div>
+                 <!-- pure grid group -->
+                    <div class="pure-g">
+                       <div class="pure-u-1-1">
+                         <div id="choropleth" class="vis-container"></div>
+                       </div>
+                     </div>
+                   <!-- end pure grid group -->
                 </section>
             </div>
 
             <div class="posts">
-                <h1 class="content-subhead">Recent Posts</h1>
-
                 <section class="post">
-                    <header class="post-header">
-
-                        <h2 class="post-title">Everything You Need to Know About Grunt</h2>
-
-                        <p class="post-meta">
-                            By <a class="post-author" href="#">Eric Ferraiuolo</a> under <a class="post-category post-category-js" href="#">JavaScript</a>
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                </section>
-
-                <section class="post">
-                    <header class="post-header">
-
-                        <h2 class="post-title">Photos from CSSConf and JSConf</h2>
-
-                        <p class="post-meta">
-                            By <a class="post-author" href="#">Reid Burke</a> under <a class="post-category" href="#">Uncategorized</a>
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1 pure-u-md-1-2">
-                                <a href="http://www.flickr.com/photos/uberlife/8915936174/">
-                                    <img alt="Photo of someone working poolside at a resort"
-                                         class="pure-img-responsive"
-                                         src="http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg">
-                                </a>
-
-                                <div class="post-image-meta">
-                                    <h3>CSSConf Photos</h3>
-                                </div>
+                  <!-- pure grid group -->
+                    <div class="pure-g">
+                        <div class="pure-u-3-4">
+                            <div id="wordcloud" class="vis-container"></div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="description description-right">
+                                <h2>Have you ever wonder what commonly found variety in ramen market</h2>
                             </div>
-
-                            <div class="pure-u-1 pure-u-md-1-2">
-                                <a href="http://www.flickr.com/photos/uberlife/8907351301/">
-                                    <img alt="Photo of the sunset on the beach"
-                                         class="pure-img-responsive"
-                                         src="http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg">
-                                </a>
-
-                                <div class="post-image-meta">
-                                    <h3>JSConf Photos</h3>
-                                </div>
+                            <div class="pure-button-group" role="group">
+                                <button class="pure-button pure-button-active" onclick="attachTop10()">Top 10 Category</button>
+                                <button class="pure-button pure-button-active" onclick="attachMostPromoted()">Most Promoted</button>
                             </div>
                         </div>
-                    </div>
+                      </div>
+                      <!-- end pure grid group -->
                 </section>
 
                 <section class="post">
-                    <header class="post-header">
-
-                        <h2 class="post-title">YUI 3.10.2 Released</h2>
-
-                        <p class="post-meta">
-                            By <a class="post-author" href="#">Andrew Wooldridge</a> under <a class="post-category post-category-yui" href="#">YUI</a>
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            We are happy to announce the release of YUI 3.10.2! You can find it now on the Yahoo! CDN, download it directly, or pull it in via npm. We’ve also updated the YUI Library website with the latest documentation.
-                        </p>
+                    <!-- pure grid group -->
+                    <div class="pure-g">
+                      <div class="pure-u-1-4">
+                        <div class="description description-left">
+                          <h2>Which country do you think manufactured the most ramen product ?</h2>
+                          <form class="pure-form pure-form-aligned">
+                            <fieldset>
+                              <div class="pure-control-group">
+                                <label for="aligned-country">Country</label>
+                                <input type="text" id="aligned-country" placeholder="Country"/>
+                              </div>
+                              <div class="pure-controls">
+                                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                              </div>
+                            </fieldset>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="pure-u-1-2">
+                        <div id="radial"  class="vis-container"></div>
+                      </div>
+                      <div class="pure-u-1-4">
+                        <div class="description description-right">
+                          <p>The three types of instant noodle seasonings are powder-type, liquid-type and granulated powder-type. Among them, powder-type has the largest share.</p>
+                        </div>
+                      </div>
                     </div>
+                    <!-- end pure grid group -->
+                </section>
+
+                <section class="post">
+                    <!-- pure grid group -->
+                    <div class="pure-g">
+                        <div class="pure-u-1-1">
+                          <div id="isotype"  class="vis-container"></div>
+                          <div class = "small-font">
+                            <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+                          </div>
+                          <p>Japan (58 known brands) tops other countries in term of number of brands, followed by USA (49 known brands) coming in second place. Not too surprised that Taiwan (47 known brands) is nominated in the Top 3 for this ranking.</p>
+                        </div>
+                    </div>
+                    <!-- end pure grid group -->
+                </section>
+                
+                <section class="post">
+                    <!-- pure grid group -->
+                    <div class="pure-g">
+                      <div class="pure-u-1-4">
+                        <div class="description description-left">
+                          <h2>This is the third section</h2>
+                          <p>The average ratings of ramen brands with 30 reviews above is 3.808/5. Among all the records, there exists 48.76% ramen brands with 30 reviews above that receives average rating higher than 3.808.</p>
+                        </div>
+                      </div>
+                      <div class="pure-u-3-4">
+                        <div id="heatmap"  class="vis-container"></div>
+                      </div>
+                    </div>
+                    <!-- end pure grid group -->
                 </section>
             </div>
 
             <div class="footer">
-
+                <div class="pure-g">
+                  <div class="pure-u-1-1 small-font">
+                    <p>This visualisation is created by <a href="https://github.com/MingHey" target="_blank">Ming Hey Lim</a>. The datasource is <a href="https://github.com/MingHey" target="_blank">some data repository online</href>.</p>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script type="text/javascript">
+  var specMap = "https://minghey.github.io/FIT3179/ramen_ratings/js/choropleth.json";
+  var specWord1= "https://minghey.github.io/FIT3179/ramen_ratings/js/top10_ramen.json";
+  var specWord2= "https://minghey.github.io/FIT3179/ramen_ratings/js/ingredient_wordcloud.json";
+  var specPie= "https://minghey.github.io/FIT3179/ramen_ratings/js/style_proportion.json";
+  var specBar= "https://minghey.github.io/FIT3179/ramen_ratings/js/isotype.json";
+  var specRect= "https://minghey.github.io/FIT3179/ramen_ratings/js/heatmap.json";
+
+  function attachTop10() {
+    vegaEmbed('#wordcloud', specWord1, {"actions": false}).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  }
+  
+  function attachMostPromoted() {
+    vegaEmbed('#wordcloud', specWord2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  }
+  
+  vegaEmbed('#choropleth', specMap, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#wordcloud', specWord1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#radial', specPie, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#isotype', specBar, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#heatmap', specRect, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+</script>
+    
 </body>
 </html>

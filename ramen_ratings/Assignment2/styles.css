@@ -34,8 +34,8 @@ h3 {
 }
 
 .sidebar {
-    background: rgb(61, 79, 93);
-    color: #fff;
+	color: #FFFFCC;
+	background-color: #B10026;
     width: 20%
 }
 
@@ -45,6 +45,8 @@ h3 {
 }
 .brand-title {
     text-transform: uppercase;
+    font-weight: 900;
+	font-family: "La Oriental", sans-serif;
 }
 .brand-tagline {
     font-weight: 300;
@@ -164,7 +166,7 @@ h3 {
 
     .header {
         margin: 80% 2em 0;
-        text-align: right;
+        text-align: center;
     }
 
     .sidebar {

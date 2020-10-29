@@ -31,7 +31,6 @@ h3 {
 .header {
     text-align: center;
     top: auto;
-    margin: 3em auto;
 }
 
 .sidebar {
@@ -80,11 +79,12 @@ h3 {
 }
 
 .content {
-    padding: 20px 10px;
+    padding: 20em 5em;
 }
 
 .vis-container{
-width: 100%;
+	width: 100%;
+	height: auto;
 }
 
 .description h2, h1{
@@ -116,51 +116,17 @@ font-family: 'Trebuchet MS', Arial, sans-serif;
     padding-bottom: 2em;
 }
 .post-title {
-    font-size: 2em;
+    font-size: 60px;
     color: #222;
     margin-bottom: 0.2em;
+    text-align: center;
 }
-.post-avatar {
-    border-radius: 50px;
-    float: right;
-    margin-left: 1em;
-}
-.post-description {
-    font-family: Georgia, "Cambria", serif;
-    color: #444;
-    line-height: 1.8em;
-}
-.post-meta {
-    color: #999;
-    font-size: 90%;
-    margin: 0;
-}
-
-.post-category {
-    margin: 0 0.1em;
-    padding: 0.3em 1em;
-    color: #fff;
-    background: #999;
-    font-size: 80%;
-}
-    .post-category-design {
-        background: #5aba59;
-    }
-    .post-category-pure {
-        background: #4d85d1;
-    }
-    .post-category-yui {
-        background: #8156a7;
-    }
-    .post-category-js {
-        background: #df2d4f;
-    }
 
 .footer {
     padding: 1em 0;
 }
 .footer a {
-    color: #ccc;
+    color: #00FFFF;
     font-size: 80%;
 }
 

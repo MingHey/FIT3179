@@ -37,7 +37,7 @@ h3 {
 .sidebar {
 	color: #FFFFCC;
 	background-color: #B10026;
-    width: 20%
+    	width: 25%
 }
 
 .dashboard-title,
@@ -45,13 +45,13 @@ h3 {
     margin: 0;
 }
 .dashboard-title {
-    text-transform: uppercase;
-    font-weight: 900;
+    	text-transform: uppercase;
+    	font-weight: 900;
 	font-family: "La Oriental", sans-serif;
 }
 .dashboard-subtitle {
-    font-weight: 300;
-    color: rgb(176, 202, 219);
+    font-weight: 100;
+    color: #FF7F50;
 }
 
 .button-top10,
@@ -80,7 +80,7 @@ h3 {
 }
 
 .content {
-    padding: 2em 1em 0;
+    padding: 20px 10px;
 }
 
 .vis-container{
@@ -156,26 +156,12 @@ font-family: 'Trebuchet MS', Arial, sans-serif;
         background: #df2d4f;
     }
 
-.post-images {
-    margin: 1em 0;
-}
-.post-image-meta {
-    margin-top: -3.5em;
-    margin-left: 1em;
-    color: #fff;
-    text-shadow: 0 1px 1px #333;
-}
-
 .footer {
     padding: 1em 0;
 }
 .footer a {
     color: #ccc;
     font-size: 80%;
-}
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
-    background: none;
 }
 
 @media (min-width: 48em) {

@@ -54,9 +54,30 @@
     .vega-bind-name{
       font-family: 'Trebuchet MS', Arial, sans-serif;
     }
-    .pure-control-group, .pure-controls{
+    
+    /*.pure-control-group, .pure-controls{
       text-align: left;
-    }
+    }*/
+    .pure-form-aligned .pure-group .pure-control-group {
+    margin: 0;
+  }
+  .pure-form.pure-form-aligned .pure-group .pure-control-group input {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    top: -1px;
+  }
+  .pure-form-aligned .pure-group .pure-control-group:first-child input {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+  }
+  .pure-form-aligned .pure-group .pure-control-group:last-child input {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+  }
   </style>
 </head>
 <body>

@@ -37,7 +37,7 @@ h3 {
 .sidebar {
 	color: #FFFFCC;
 	background-color: #B10026;
-    	width: 25%
+    	width: 22%
 }
 
 .dashboard-title,
@@ -52,22 +52,36 @@ h3 {
 .dashboard-subtitle {
     font-weight: 100;
     color: #FF7F50;
+    font-size: 36px;
 }
 
 .button-top10,
-.button-mostpromoted {
-	color: white;
-        border-radius: 4px;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
+    .button-mostpromoted {
+      color: black;
+      background-color: white; 
+      border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      border: none;  
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%
+    }
+    .button-top10 {
+      border: 2px solid rgb(202, 60, 60);
+    }
 
-.button-top10 {
-	background: rgb(202, 60, 60);
-}
-
-.button-mostpromoted {
-	background: rgb(223, 117, 20);
-        }
+  .button-top10:hover {
+    background-color: rgb(202, 60, 60);
+    color: white;
+  }
+  .button-mostpromoted {
+    border: 2px solid rgb(223, 117, 20);
+  }
+  .button-mostpromoted:hover {
+    background-color: rgb(223, 117, 20);
+    color: white;
+  }  
 
 .content-subhead {
     text-transform: uppercase;

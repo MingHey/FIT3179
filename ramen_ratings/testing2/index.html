@@ -14,15 +14,13 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-4ZPLezkTZTsojWFhpdFembdzFudphhoOzIunR1wH6g1WQDzCAiPvDyitaK67mp0+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
     
-    <link rel="stylesheet" type="text/css" href="https://minghey.github.io/FIT3179/ramen_ratings/Assignment2/styles.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://minghey.github.io/FIT3179/ramen_ratings/Assignment2/styles2.css" media="all">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet"> 
 </head>
     
 <body>
-<div id="layout" class="pure-g">
-
-    <div class="sidebar pure-u-md-1-4">
+    <div class="sidebar pure-u-1-4">
         <div class="header">
             <h1 class="dashboard-title">Ramen Exploration & Visualisation</h1>
             <h2 class="dashboard-subtitle">Welcome Ramen Enthusiasts</h2>
@@ -31,101 +29,8 @@
     </div>
 
     <div class="content pure-u-md-3-4">
-
-                    <header class="post-header">
-                        <h2 class="post-title">Have A Glance On The Popularity Of Ramen Worldwide</h2>  
-                    </header>
-
-                 <!-- pure grid group -->
-                    <div class="pure-g">
-                       <div class="pure-u-1-1">
-                         <div id="choropleth" class="vis-container"></div>
-                       </div>
-                     </div>
-                   <!-- end pure grid group -->
-
-                  <!-- pure grid group -->
-                    <div class="pure-g">
-                        <div class="pure-u-3-4">
-                            <div id="wordcloud" class="vis-container"></div>
-                        </div>
-                        <div class="pure-u-1-4">
-                            <div class="description description-right">
-                                <h2>Have you ever wonder what commonly found variety in ramen market</h2>
-                            </div>
-                            <div class="pure-button-group" role="group">
-                                <button class="button-top10 pure-button" onclick="attachTop10()">Top 10 Category</button>
-                                <button class="button-mostpromoted pure-button" onclick="attachMostPromoted()">Most Promoted</button>
-                            </div>
-                        </div>
-                      </div>
-                      <!-- end pure grid group -->
-
-                    <!-- pure grid group -->
-                    <div class="pure-g">
-                      <div class="pure-u-1-4">
-                        <div class="description description-left">
-                          <h2>Which country do you think manufactured the most ramen product ?</h2>
-                        </div>
-                          <form class="pure-form pure-form-aligned">
-                            <fieldset>
-                              <div class="pure-control-group">
-                                <label for="aligned-country">Country</label>
-                                <input type="text" id="aligned-country" placeholder="Country"/>
-                              </div>
-                              <div class="pure-controls">
-                                <button type="submit" class="pure-button pure-button-primary">Submit</button>
-                              </div>
-                            </fieldset>
-                          </form>
-                      </div>
-                      <div class="pure-u-1-2">
-                        <div id="radial"  class="vis-container"></div>
-                      </div>
-                      <div class="pure-u-1-4">
-                        <div class="description description-right">
-                          <p>The three types of instant noodle seasonings are powder-type, liquid-type and granulated powder-type. Among them, powder-type has the largest share.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end pure grid group -->
-
-                    <!-- pure grid group -->
-                    <div class="pure-g">
-                        <div class="pure-u-1-1">
-                          <div id="isotype"  class="vis-container"></div>
-                          <div class = "small-font">
-                            <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
-                          </div>
-                          <p>Japan (58 known brands) tops other countries in term of number of brands, followed by USA (49 known brands) coming in second place. Not too surprised that Taiwan (47 known brands) is nominated in the Top 3 for this ranking.</p>
-                        </div>
-                    </div>
-                    <!-- end pure grid group -->
-
-                    <!-- pure grid group -->
-                    <div class="pure-g">
-                      <div class="pure-u-1-4">
-                        <div class="description description-left">
-                          <h2>This is the third section</h2>
-                          <p>The average ratings of ramen brands with 30 reviews above is 3.808/5. Among all the records, there exists 48.76% ramen brands with 30 reviews above that receives average rating higher than 3.808.</p>
-                        </div>
-                      </div>
-                      <div class="pure-u-3-4">
-                        <div id="heatmap"  class="vis-container"></div>
-                      </div>
-                    </div>
-                    <!-- end pure grid group -->
-
-            <div class="footer">
-                <div class="pure-g">
-                  <div class="pure-u-1-1 small-font">
-                    <p>This visualisation is created by <a href="https://github.com/MingHey" target="_blank">Ming Hey Lim</a>. The datasource is <a href="https://github.com/MingHey" target="_blank">some data repository online</href>.</p>
-                  </div>
-                </div>
-            </div>
-
+        <p> Text</p>
     </div>
-</div>
 
 <script type="text/javascript">
   var specMap = "https://minghey.github.io/FIT3179/ramen_ratings/js/choropleth.json";

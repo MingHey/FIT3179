@@ -62,7 +62,7 @@
       "encoding": {
         "text": {"field": "Rating", "type": "quantitative", "format": ".3f"},
         "color": {
-          "condition": {"test": "datum['Rating'] < 3.655", "value": "black"},
+          "condition": {"test": "datum['Rating'] < 3.807512", "value": "black"},
           "value": "white"
         }
       }

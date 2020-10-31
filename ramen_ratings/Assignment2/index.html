@@ -27,17 +27,19 @@
       text-align: center;
     }
     h3 {
+        font-family: 'Lucida Grande', Charcoal;
         font-weight: 100;
+        align: center;
     }
-      h2, h3 {
+      h2 {
           font-family: Impact, Charcoal, sans-serif;
-        
       }
     body{
-       background-color: white;
+       background-color: #FFE4B5;
     }
     p {
-      font-family: 'Lucida Grande', sans-serif;
+      padding: 0;
+      font-family: 'Lucida Grande Bold', Charcoal;
       font-size: 18px;
     }
     .page{
@@ -49,6 +51,7 @@
     }
     .vis-container{
       width: 100%;
+      height: 100%;
     }
     .description h2, h1{
       margin-top:0px;
@@ -67,10 +70,10 @@
       font-size: 14px;
       font-family: Arial;
     }
-    .sidebar {
+    .title {
       color: #FFFFCC;
       background-color: #B10026;
-          width: 22%
+      height: 100%;
     }
     .content {
         padding: 20em 5em;
@@ -87,7 +90,7 @@
     }
     .dashboard-subtitle {
         font-weight: 100;
-        font-size: 120%;
+        font-size: 100%;
         color: #FF7F50;
     }
      .vega-bind-name{
@@ -95,7 +98,7 @@
       font-size: 14px;
     }
     select {
-        font-size: 14px;    
+        font-size: 20px;    
     }
     .button-top10,
     .button-mostpromoted {
@@ -142,20 +145,20 @@
 .bold {
     font-weight: 900;
     font-size: 130%;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Lucida Grande Bold', Charcoal;
     color: red;
 }
 .first {
     color: #D4AF37;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Lucida Grande Bold', Charcoal;
 }
 .second {
     color: #AAA9AD;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Lucida Grande Bold', Charcoal;
 }
 .third {
     color: #912E17;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Lucida Grande Bold', Charcoal;
 }
 @media (min-width: 48em) {
     .content {
@@ -182,7 +185,8 @@
 </head>
     
 <body>
-    <div class="sidebar pure-u-1-4">
+  <div class="page">
+    <div class="title pure-u-1-1">
         <div class="header">
             <h1 class="dashboard-title">Ramen Exploration & Visualisation</h1>
             <h3 class="dashboard-subtitle">Welcome Ramen Enthusiasts</h3>
@@ -190,8 +194,6 @@
         </div>
     </div>
 
-    <div class="content pure-u-3-4">
-    <div id="layout">
       <!-- pure grid group -->
       <div class="pure-g">
         <div class="pure-u-1-1">
@@ -273,7 +275,6 @@
           <p>This visualisation is created by <a href="https://github.com/MingHey/FIT3179/tree/main/ramen_ratings" target="_blank">Ming Hey Lim</a>. The datasource is <a href="https://www.theramenrater.com/resources-2/the-list/" target="_blank">The Ramen Rater</href>.</p>
         </div>
       </div>
-    </div>
     </div>
 
 <script type="text/javascript">

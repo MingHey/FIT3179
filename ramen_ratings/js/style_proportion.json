@@ -9,7 +9,7 @@
     "align": "center"
   },
   "width": "container",
-  "height": 400,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/MingHey/FIT3179/main/ramen_ratings/data/ramen_ratings.csv"
   },

@@ -7,8 +7,9 @@
     "fontWeight": "bold",
     "font": "Trebuchet MS, Arial, sans-serif"
   },
-  "width": 550,
-  "height": 400,
+  "height": 425,
+  "width": 600,
+  "autosize": { "type": "fit-y", "contains": "padding" },
   "data": [
     {
       "name": "table",

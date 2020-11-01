@@ -127,9 +127,9 @@
       font-weight: 900;
       font-size: 130%;
 }
-.first, .second. third {
+.first, .second, .third {
       font-family: 'Lucida Grande Bold', Charcoal;
-      font-weight: 600;
+      font-weight: bold;
 }
 .first {
     color: #D4AF37;

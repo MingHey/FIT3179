@@ -123,17 +123,22 @@
     font-family: 'Lucida Grande Bold', Charcoal;
     color: red;
 }
+.highlight {
+      font-weight: 900;
+      font-size: 130%;
+}
+.first, .second. third {
+      font-family: 'Lucida Grande Bold', Charcoal;
+      font-weight: bold;
+}
 .first {
     color: #D4AF37;
-    font-family: 'Lucida Grande Bold', Charcoal;
 }
 .second {
     color: #AAA9AD;
-    font-family: 'Lucida Grande Bold', Charcoal;
 }
 .third {
     color: #912E17;
-    font-family: 'Lucida Grande Bold', Charcoal;
 }
 @media (min-width: 48em) {
 

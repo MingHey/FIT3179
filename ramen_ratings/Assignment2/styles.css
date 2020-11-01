@@ -124,7 +124,7 @@
     color: red;
 }
 .highlight {
-      font-weight: 900;
+      font-weight: bold;
       font-size: 130%;
 }
 .first, .second, .third {
